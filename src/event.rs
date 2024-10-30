@@ -14,7 +14,7 @@
 use crate::contract::{AbiVersion, SerdeEvent};
 use crate::error::AbiError;
 use crate::{Function, Param, Token, TokenValue};
-use ever_block::{Result, SliceData};
+use ton_dev_block::{Result, SliceData};
 
 /// Contract event specification.
 #[derive(Debug, Clone, PartialEq)]

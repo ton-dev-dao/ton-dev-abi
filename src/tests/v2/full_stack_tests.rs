@@ -11,9 +11,9 @@
 * limitations under the License.
 */
 
-use ever_block::{MsgAddressInt, Serializable, Deserializable};
-use ever_block::dictionary::HashmapE;
-use ever_block::{
+use ton_dev_block::{MsgAddressInt, Serializable, Deserializable};
+use ton_dev_block::dictionary::HashmapE;
+use ton_dev_block::{
     ed25519_generate_private_key, ed25519_verify, BuilderData, IBitstring, SliceData,
     ED25519_SIGNATURE_LENGTH,
 };
@@ -786,7 +786,7 @@ const ABI_WRONG_STORAGE_LAYOUT: &str = r#"{
 #[test]
 fn test_wrong_storage_layout() {
     let image = include_bytes!("FairNFTCollection.tvc");
-    let image = ever_block::StateInit::construct_from_bytes(image).unwrap();
+    let image = ton_dev_block::StateInit::construct_from_bytes(image).unwrap();
 
     assert!(decode_storage_fields(ABI_WRONG_STORAGE_LAYOUT, SliceData::load_cell(image.data.unwrap()).unwrap(), false).is_ok());
 }

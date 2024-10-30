@@ -11,9 +11,9 @@
 * limitations under the License.
 */
 
-use ever_block::{MsgAddressInt, Serializable};
-use ever_block::dictionary::HashmapE;
-use ever_block::{ed25519_generate_private_key, BuilderData, Ed25519PublicKey, SliceData};
+use ton_dev_block::{MsgAddressInt, Serializable};
+use ton_dev_block::dictionary::HashmapE;
+use ton_dev_block::{ed25519_generate_private_key, BuilderData, Ed25519PublicKey, SliceData};
 
 use crate::json_abi::*;
 

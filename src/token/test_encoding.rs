@@ -16,9 +16,9 @@ use std::collections::BTreeMap;
 use std::iter::FromIterator;
 use std::str::FromStr;
 
-use ever_block::{AnycastInfo, Grams, MsgAddress, Serializable};
-use ever_block::dictionary::{HashmapE, HashmapType};
-use ever_block::{
+use ton_dev_block::{AnycastInfo, Grams, MsgAddress, Serializable};
+use ton_dev_block::dictionary::{HashmapE, HashmapType};
+use ton_dev_block::{
     AccountId, BuilderData, Cell, IBitstring, Result, SliceData, ED25519_PUBLIC_KEY_LENGTH,
 };
 

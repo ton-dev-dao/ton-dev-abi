@@ -24,8 +24,8 @@ use num_bigint::{BigInt, BigUint};
 use num_traits::ToPrimitive;
 use serde_json;
 use std::{collections::BTreeMap, convert::TryInto};
-use ever_block::{types::Grams, MsgAddress};
-use ever_block::{
+use ton_dev_block::{types::Grams, MsgAddress};
+use ton_dev_block::{
     error, fail, BuilderData, Cell, HashmapE, HashmapType, IBitstring, Result, SliceData,
 };
 
@@ -78,13 +78,13 @@ impl TokenValue {
             ParamType::Address => {
                 let mut slice = find_next_bits(slice, 1)?;
                 let address =
-                    <MsgAddress as ever_block::Deserializable>::construct_from(&mut slice)?;
+                    <MsgAddress as ton_dev_block::Deserializable>::construct_from(&mut slice)?;
                 Ok((TokenValue::Address(address), slice))
             }
             ParamType::AddressStd => {
                 let mut slice = find_next_bits(slice, 1)?;
                 let address =
-                    <MsgAddress as ever_block::Deserializable>::construct_from(&mut slice)?;
+                    <MsgAddress as ton_dev_block::Deserializable>::construct_from(&mut slice)?;
                 match address {
                     MsgAddress::AddrNone => {}
                     MsgAddress::AddrStd(_) => {}
@@ -101,7 +101,7 @@ impl TokenValue {
             ParamType::String => Self::read_string(slice, last, abi_version),
             ParamType::Token => {
                 let mut slice = find_next_bits(slice, 1)?;
-                let gram = <Grams as ever_block::Deserializable>::construct_from(&mut slice)?;
+                let gram = <Grams as ton_dev_block::Deserializable>::construct_from(&mut slice)?;
                 Ok((TokenValue::Token(gram), slice))
             }
             ParamType::Time => Self::read_time(slice),

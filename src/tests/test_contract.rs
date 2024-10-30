@@ -11,8 +11,8 @@
 * limitations under the License.
 */
 
-use ever_block::{Deserializable, StateInit};
-use ever_block::{read_single_root_boc, Result, SliceData};
+use ton_dev_block::{Deserializable, StateInit};
+use ton_dev_block::{read_single_root_boc, Result, SliceData};
 
 use crate::{Contract, PublicKeyData};
 

@@ -28,7 +28,7 @@ use std::{
     convert::TryInto,
     str::FromStr,
 };
-use ever_block::{
+use ton_dev_block::{
     base64_decode, error, fail, read_single_root_boc, Cell, Grams, MsgAddress, Result,
     ED25519_PUBLIC_KEY_LENGTH,
 };

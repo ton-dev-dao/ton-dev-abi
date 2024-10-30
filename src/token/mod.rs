@@ -24,7 +24,7 @@ use chrono::prelude::Utc;
 use num_bigint::{BigInt, BigUint};
 use std::collections::BTreeMap;
 use std::fmt;
-use ever_block::{fail, BuilderData, Cell, Grams, MsgAddress, Result};
+use ton_dev_block::{fail, BuilderData, Cell, Grams, MsgAddress, Result};
 
 mod deserialize;
 mod detokenizer;
@@ -331,7 +331,7 @@ impl TokenValue {
         match param_type {
             ParamType::Int(size) | ParamType::Uint(size) => Ok(*size),
             ParamType::Address | ParamType::AddressStd => Ok(crate::token::STD_ADDRESS_BIT_LENGTH),
-            _ => Err(ever_block::error!(AbiError::InvalidData {
+            _ => Err(ton_dev_block::error!(AbiError::InvalidData {
                 msg: "Only integer and std address values can be map keys".to_owned()
             })),
         }

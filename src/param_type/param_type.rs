@@ -17,7 +17,7 @@ use crate::{AbiError, Param};
 use crate::contract::{AbiVersion, ABI_VERSION_1_0, ABI_VERSION_2_0, ABI_VERSION_2_1, ABI_VERSION_2_4};
 use std::fmt;
 
-use ever_block::{error, Result};
+use ton_dev_block::{error, Result};
 
 /// Function and event param types.
 #[derive(Debug, Clone, PartialEq, Eq)]
