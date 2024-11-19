@@ -2,7 +2,7 @@
 build = 'common/build/build.rs'
 edition = '2021'
 name = 'ton_dev_abi'
-version = '2.7.11'
+version = '2.8.1'
 
 [dependencies]
 anyhow = '1.0'
